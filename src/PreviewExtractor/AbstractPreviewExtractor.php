@@ -22,12 +22,12 @@ abstract class AbstractPreviewExtractor
      * @param string $url URL страницы, на которой может быть обнаружена статья
      * @param array $params_arr Необязательный массив параметров гибкой настройки
      */
-    abstract public function __construct($url, $params_arr = array());
+    abstract public function __construct(string $url, array $params_arr = []);
 
     /**
      * Возвращает анонс статьи в виде простого текста.
      *
      * @return string
      */
-    abstract public function getPreview();
+    abstract public function getPreview(): string;
 }
